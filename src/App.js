@@ -29,27 +29,18 @@ function App() {
       color: goblinFormColor,
     };
 
-    console.log(submitGoblin);
-
     setallGoblins([...allGoblins, newGoblin]);
 
     setgoblinFormName('');
     setgoblinFormHp('');
     setgoblinFormColor('');
-
-    // on submit, make a new goblin object with a random id, a name that comes from the form state, an hp that comes from the form state, and a color that comes from the form state
-
-    // update the allGoblins array. Add the new goblin to the allGoblins array immutably.
-
-    // clear out the goblin form state items by setting them to empty strings. This will cause the form to reset in the UI.
   }
 
   function handleDeleteGoblin(name) {
-    // find the index of the goblin in allGoblins with this id
     const indexToRemove = allGoblins.findIndex((goblin) => goblin.name === name);
-    // use splice to delete the goblin object at this index
+
     allGoblins.splice(indexToRemove, 1);
-    // update the allGoblins array immutably to this new, smaller array
+
     setallGoblins([...allGoblins]);
   }
 
