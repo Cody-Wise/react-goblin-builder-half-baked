@@ -53,7 +53,7 @@ function App() {
     setallGoblins([...allGoblins]);
   }
 
-  useEffect(() => handleFilterGoblins(search), [search, allGoblins]);
+  useEffect(() => handleFilterGoblins(search), [search, allGoblins]); //eslint-disable-line
 
   function handleFilterGoblins(search) {
     const goblinSearch = allGoblins.filter((goblin) =>
